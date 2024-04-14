@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.container{
+    margin-top: 50px;
+}
+.main{
+    background-color: rgb(0, 84, 105);
+    color: #fff;
+    height: auto;
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.btn{
+    height: auto;
+    width: 40px;
+    border-radius: 50% !important;
+}
+.ml-3{
+    margin-left: 20px;
+    
+}
