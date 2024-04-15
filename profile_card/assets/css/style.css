@@ -1,10 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 .profile-card {
+    display: flex;
+    flex-direction: column;
     width: 300px;
-    height: fit-content;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(0, 90, 98);
     border-radius: 15px;
     padding: 20px 15px;
-    margin: 20px auto;
     box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
   }
   
@@ -20,25 +31,28 @@
   }
   
   .name {
-    font-size: 24px;
+    font-size: 25px;
     margin-bottom: 0px;
     color: white;
   }
   
   .occupation {
-    font-size: 16px;
+    
+    font-size: 22px;
+    text-align: center;
     color: white;
     margin-bottom: 10px;
   }
   
   .description {
-    font-size: 14px;
+    font-size: 16px;
     color: white;
     margin-bottom: 10px;
+    text-align: center;
   }
   
   .contact {
-    font-size: 14px;
+    font-size: 16px;
     color: white;
   }
   
