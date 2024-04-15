@@ -24,6 +24,10 @@ function calculate() {
             result="Cannot divide by zero! "
         }
     }
+
+    if (!isNaN(result)) {
+        result = parseFloat(result.toFixed(2));
+    } 
     document.getElementById('result').textContent = result.toString();
 }
 
