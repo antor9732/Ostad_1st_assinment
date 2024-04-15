@@ -1,47 +1,30 @@
-// Clear the entire display
-function clearDisplay() {
-    document.getElementById('display').value = '';
-}
-// Add clear button functionality
-document.getElementById('clear').addEventListener('click', clearDisplay);
 
-// Function to handle backspace
-function backSpace() {
-    const display = document.getElementById('display');
-    display.value = display.value.substring(0, display.value.length - 1);
-}
-// show the value in Display
-function math(value) {
-    document.getElementById('display').value += value;
-}
 
-// Function to handle operator
-function operator(op) {
-    const display = document.getElementById('display');
-    const lastChar = display.value[display.value.length - 1];
-    
-    // Prevent adding multiple operators consecutively
-    if (!['+', '-', '*', '/', '%', '.'].includes(lastChar)) {
-        display.value += op;
-    } else if (op === '.') {
-        // Allow decimal if the last segment of the number doesn't contain a decimal
-        const parts = display.value.split(/[\+\-\*\/\%]/);
-        const lastPart = parts[parts.length - 1];
-        if (!lastPart.includes('.')) {
-            display.value += op;
+function calculate() {
+    var number1 = parseFloat(document.getElementById('number1').value);
+    var number2 = parseFloat(document.getElementById('number2').value);
+    var operation = document.getElementById('operation').value;
+    var result = 0;
+
+   
+    if(operation === 'addition') {
+        result = number1 + number2;
+
+    }
+    else if (operation === 'subtraction') {
+        result = number1 - number2;
+    }
+    else if(operation ===  'multiplication') {
+        result = number1 * number2;
+
+    }else if(operation === 'division') {
+        if (number2!==0) {
+            result = number1 / number2;
+        }else{
+            result="Cannot divide by zero! "
         }
     }
-}
-
-
-// Function to compute the final result
-function equal() {
-    const display = document.getElementById('display');
-    try {
-        display.value = eval(display.value);
-    } catch (equal) {
-        display.value = 'Error';
-    }
+    document.getElementById('result').textContent = result.toString();
 }
 
 
